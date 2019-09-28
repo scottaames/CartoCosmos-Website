@@ -7,20 +7,28 @@
 	{
 		margin: 0px;
 		padding: 0px;
-		background: #333333;
+		background: #0d192d;
 		font-family: 'Inconsolata', monospace;
-		font-size: 11pt;
+		font-size: 12pt;
 		font-weight: 300;
-		color: #656565;
+		color: #90fbdc;
 	}
 
 
-	h1, h2, h3
+	h1
 	{
 		margin: 0;
 		padding: 0;
 		font-weight: 700;
-		color: #2B3F48;
+		color: #e8f1fe;
+	}
+
+	h2, h3
+	{
+		margin: 0;
+		padding: 0;
+		font-weight: 700;
+		color: #90fbdc;
 	}
 
 	p, ol, ul
@@ -39,8 +47,11 @@
 		text-align: center;
 	}
 
-		ul.actions li
+		ul.actions a:hover
 		{
+		color: #8ef8da;
+		background: #8a92ad;
+		border: 1px #8a92ad solid
 		}
 
 	p
@@ -54,12 +65,14 @@
 
 	a
 	{
-		color: #0000FF;
+		color: #90fbdc;
 	}
 
 	a:hover
 	{
 		text-decoration: none;
+		color: #90fbdc;
+		background: #8a92ad;
 	}
 
 	.container
@@ -67,6 +80,11 @@
 		overflow: hidden;
 		margin: 0em auto;
 		width: 1000px;
+	}
+
+	hr
+	{
+		  border-top: 1px dotted #112b4d;
 	}
 
 /*********************************************************************************/
@@ -157,7 +175,7 @@
 
 	ul.contact li a
 	{
-		color: #FFF;
+		color: #90fbdc;
 	}
 
 	ul.contact li a:before
@@ -169,7 +187,7 @@
 		line-height: 40px;
 		border-radius: 20px;
 		text-align: center;
-		color: #FFFFFF;
+		color: #90fbdc;
 	}
 
 	ul.contact li a.icon-twitter:before { background: #2DAAE4; }
@@ -186,14 +204,14 @@
 	{
 		display: inline-block;
 		padding: 0em 3em;
-		background: #009E2D;
+		background: #0d192d;
+		border: 1px #90fbdc solid;
 		letter-spacing: 0.20em;
 		line-height: 4em;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: 400;
 		font-size: 1em;
-		color: #FFF;
 	}
 
 	.button:before
@@ -207,6 +225,12 @@
 		border-radius: 20px;
 		text-align: center;
 		color: #272925;
+	}
+
+	.button:hover
+	{
+		color: #90fbdc;
+		background: #8a92ad;
 	}
 
 /*********************************************************************************/
@@ -227,7 +251,7 @@
 	.title .byline
 	{
 		font-size: 1.7em;
-		color: #6F6F6F;
+		color: #8a92ad;
 	}
 
 /*********************************************************************************/
@@ -300,7 +324,7 @@
 
 	#wrapper
 	{
-		background: #FFF;
+		background: #0d192d;
 	}
 
 /*********************************************************************************/
@@ -309,7 +333,7 @@
 
 	#header-wrapper
 	{
-		background: #333333;
+		background: #0d192d;
 	}
 
 	#header
@@ -331,14 +355,14 @@
 
 	#logo h1
 	{
-		color: #FFF;
+		color: #8ef8da;
 	}
 
 	#logo a
 	{
 		text-decoration: none;
 		text-transform: uppercase;
-		color: #FFF;
+		color: #8ef8da;
 	}
 
 /*********************************************************************************/
@@ -366,23 +390,25 @@
 
 	#menu li a, #menu li span
 	{
-		padding: 1em 1.5em;
+		padding: 1em 1.2em;
 		letter-spacing: 1px;
 		text-decoration: none;
 		text-transform: uppercase;
-		font-size: 0.8em;
-		color: #FFF;
+		font-size: 1em;
+		color: #8ef8da;
 	}
 
 	#menu li:hover a, #menu li.active a, #menu li.active span
 	{
-		color: #FFF;
+		color: #8ef8da;
+		background: #8a92ad;
+		border: 1px #8a92ad solid
 	}
 
 	#menu .current_page_item a
 	{
-		background: #009E2D;
-		color: #FFF;
+		background: #8a92ad;
+		border: 1px #8a92ad solid;
 	}
 
 	#menu .icon
@@ -397,10 +423,10 @@
 	{
 		overflow: hidden;
 		padding: 7em 0em 5em 0em;
-		background: #202020;
+		background: #0d192d;
 		background-size: cover;
 		text-align: center;
-		color: rgba(255,255,255,.8);
+		color: #90fbdc;
 	}
 
 	#banner .title
@@ -411,18 +437,26 @@
 
 	#banner .title h2
 	{
-		color: #FFF;
+		color: #8ef8da;
 	}
 
 	#banner .title .byline
 	{
-		color: rgba(255,255,255,.6);
+		color: #8a92ad;
 	}
 
 	#banner .button
 	{
 		margin-top: 3em;
-		background: #009E2D !important;
+		background: #0d192d !important;
+		border: 1px #90fbdc solid;
+	}
+
+	#banner li a:hover
+	{
+		color: #8ef8da;
+		background: #8a92ad;
+		border: 1px #8a92ad solid
 	}
 
 /*********************************************************************************/
@@ -498,22 +532,22 @@
 	{
 		overflow: hidden;
 		padding: 5em 0em;
-		background: #009E2D;
-		color: rgba(255,255,255,.8);
+		background: #0d192d;
 		text-align: center;
 	}
 
 	#featured a
 	{
-		color: rgba(255,255,255,1);
+		color: 90fbdc;
 	}
 
 	#featured .button
 	{
-		background: #FFF;
+		background: #90fbdc;
 		margin-top: 3em;
 		font-size: 1em;
-		color: #009E2D;
+		background: #0d192d;
+		border: 1px #90fbdc solid;
 	}
 
 	#featured .title
@@ -522,12 +556,12 @@
 
 	#featured .title h2
 	{
-		color: #FFF;
+		color: #90fbdc;
 	}
 
 	#featured .title .byline
 	{
-		color: rgba(255,255,255,.6);
+		color: #8a92ad;
 	}
 
 /*********************************************************************************/
