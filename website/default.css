@@ -42,22 +42,9 @@
 		list-style: none;
 	}
 
-	ul.actions
-	{
-		text-align: center;
-
-	}
-
-		ul.actions a:hover
-		{
-		color: #8ef8da;
-		background: #8a92ad;
-		border: 1px #8a92ad solid
-		}
-
 	p
 	{
-		line-height: 180%;
+		line-height: 160%;
 	}
 
 	strong
@@ -76,6 +63,32 @@
 		background: #8a92ad;
 	}
 
+	.row
+	{
+		display: flex;
+	}
+
+	.col img
+	{
+		height: 300px;
+		width: 300px;
+	}
+
+	.col
+	{
+		float: left;
+		width: 50%;
+		padding: 5px;
+		text-align: center;
+	}
+
+	.row::after
+	{
+		content: "";
+		clear: both;
+		display: table;
+	}
+
 	.container
 	{
 		overflow: hidden;
@@ -85,7 +98,7 @@
 
 	hr
 	{
-		  border-top: 1px dotted #112b4d;
+		border-top: 1px dotted #112b4d;
 	}
 
 
@@ -114,6 +127,12 @@
 	.image-left
 	{
 		float: left;
+		margin: 0 2em 2em 0;
+	}
+
+	.image-right
+	{
+		float: right;
 		margin: 0 2em 2em 0;
 	}
 
@@ -241,7 +260,7 @@
 
 	.title
 	{
-		margin-bottom: 3em;
+		margin-bottom: 1em;
 	}
 
 	.title h2
@@ -254,6 +273,12 @@
 	{
 		font-size: 1.7em;
 		color: #8a92ad;
+	}
+
+	.title .byline img
+	{
+		max-width: 250px;
+		max-height: 250px;
 	}
 
 
@@ -589,7 +614,8 @@
 	padding: 3em 2em 2em 2em;
 	border: 1px solid rgba(0,0,0,0.1);
 	border-radius: 8px;
-		text-align: center;
+	text-align: center;
+	font-size: 18px;
 }
 
 
