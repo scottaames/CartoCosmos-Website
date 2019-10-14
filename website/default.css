@@ -82,6 +82,16 @@
 		text-align: center;
 	}
 
+	.col h2
+	{
+		color: #8a92ad;
+	}
+
+	.col h3
+	{
+		text-decoration: underline;
+	}
+
 	.row::after
 	{
 		content: "";
@@ -279,6 +289,18 @@
 	{
 		max-width: 250px;
 		max-height: 250px;
+	}
+
+	.title li
+	{
+		padding-top: 2em;
+		font-size: 18px;
+	}
+
+	.title li span
+	{
+		text-decoration: underline;
+		color: white;
 	}
 
 
@@ -622,7 +644,7 @@
 	#extra
 	{
 		overflow: hidden;
-		padding: 5em 0em;
+		padding: 3em 0em;
 	}
 
 	#extra .title
