@@ -355,21 +355,33 @@
 /*********************************************************************************/
 /* 2-column                                                                      */
 /*********************************************************************************/
-
-	.tbox1,
 	.tbox2
 	{
-		width: 575px;
+		width: 40%;
+	}
+
+	.tbox1
+	{
+		width: 40%;
 	}
 
 	.tbox1
 	{
 		float: left;
+		margin-left: 2em;
+		padding: 0%;
 	}
 
 	.tbox2
 	{
-		float: right;
+		float: left;
+		padding: 0%;
+		margin-right: 2em;
+	}
+
+	#two-column
+	{
+		width: 100%;
 	}
 
 	#wrapper
