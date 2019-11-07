@@ -10,7 +10,7 @@
 		padding: 0px;
 		background: #0d192d;
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 12pt;
+		font-size: 13pt;
 		font-weight: 300;
 		color: #90fbdc;
 	}
@@ -56,6 +56,11 @@
 		{
 		}
 
+	.center
+	{
+		text-align: center;
+	}
+
 	strong
 	{
 	}
@@ -80,17 +85,21 @@
 
 	.img-centered
 	{
-		padding-left: 200px;
-		display: block;
 		margin-left: auto;
 		margin-right: auto;
 		width: 50%;
 		height: 50%;
+		text-align: center;
+	}
+	.img-centered h2
+	{
+		color: #8a92ad;
 	}
 
 	.row
 	{
 		display: flex;
+		margin: 3em 0 3em 0;
 	}
 
 	.col img
@@ -156,7 +165,8 @@
 	{
 		display: block;
 		width: 100%;
-		margin: 0 0 2em 0;
+		margin: 0 auto;
+		text-align: center;
 	}
 
 	.image-left
@@ -296,6 +306,7 @@
 	.title
 	{
 		margin-bottom: 1em;
+		margin-top: 1em;
 	}
 
 	.title h2
@@ -380,26 +391,18 @@
 /*********************************************************************************/
 /* 2-column                                                                      */
 /*********************************************************************************/
-	.tbox2
-	{
-		width: 40%;
-	}
 
 	.tbox1
 	{
 		float: left;
-		margin-left: 3em;
-		width: 40%;
+		margin-left: 0;
+		width: 50%;
 	}
 
 	.tbox2
 	{
-		float: left;
-		margin-right: 3em;
-	}
-
-	#two-column
-	{
+		float: right;
+		margin-right: 0;
 		width: 100%;
 	}
 
@@ -508,7 +511,6 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
-		height: 100%;
 		text-align: center;
 	}
 
@@ -526,11 +528,22 @@
 		color: #8ef8da;
 		align-self: top;
 		font-family: 'Source Code Pro', monospace;
+		font-size: 4em;
 	}
 
 	.img-container .title h2
 	{
+		font-style: italic;
+	}
+
+	.img-container h2
+	{
 		color: #8ef8da;
+		text-shadow:
+			-1px -1px 0 #000,
+			1px -1px 0 #000,
+			-1px 1px 0 #000,
+			1px 1px 0 #000;
 	}
 
 	.img-container .title .byline
@@ -675,7 +688,7 @@
 	#extra
 	{
 		overflow: hidden;
-		padding: 3em 0em;
+
 	}
 
 	#extra .title
