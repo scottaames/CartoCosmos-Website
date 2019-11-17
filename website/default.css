@@ -140,6 +140,13 @@
 		width: 1000px;
 	}
 
+	.schedule
+	{
+	    overflow: auto;
+	    max-width: 100%;
+	    max-height: 100%;
+	}
+
 	hr
 	{
 		border-top: 1px dotted #112b4d;
