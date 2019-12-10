@@ -28,7 +28,7 @@
             <div
               class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
             >
-              <h2 class="title text-center">Let's talk product</h2>
+              <h2 class="title text-center">About Our Product</h2>
               <h5 class="description">
                 Leaflet for planetary mapping (Leaflet-planetary for short) is a
                 plugin extension for
@@ -37,7 +37,7 @@
                 to the planetary science community and their exploration of the
                 solar system and beyond. This project is a senior capstone
                 project by students at Northern Arizona University in Flagstaff,
-                AZ sponsored by the United States Geological Survey (USGS)
+                AZ, sponsored by the United States Geological Survey (USGS)
                 Astrogeology Center, a NASA subsidiary.
               </h5>
             </div>
@@ -97,7 +97,7 @@
             <div class="md-layout-item md-size-50 md-small-size-100 mx-auto">
               <div class="btn-container">
                 <md-button
-                  href="/detailspage"
+                  href="/#/detailspage""
                   class="md-button md-primary md-lg md-upgrade"
                   target="_blank"
                 >
@@ -105,7 +105,7 @@
                 </md-button>
                 <md-button
                   class="md-button md-primary md-lg md-upgrade"
-                  href="https://github.com/CartoCosmos/App"
+                  href="https://github.com/scottaames/CartoCosmos"
                   target="_blank"
                 >
                   <i class="fab fa-github"></i>

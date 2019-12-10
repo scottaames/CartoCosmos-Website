@@ -107,7 +107,7 @@
               </li>
 
               <md-list-item
-                href="https://github.com/CartoCosmos/App"
+                href="https://github.com/CartoCosmos/"
                 target="_blank"
               >
                 <i class="fab fa-github"></i>

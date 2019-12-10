@@ -29,18 +29,16 @@
           <div class="md-layout">
             <div class="md-layout-item md-size-50 md-xsmall-size-100">
               <div class="vertical-align-text">
-                An important part of space exploration is launching satellites
-                into space toorbit planetary bodies, collect large amounts of
-                data, and take images of these bodies. The data and images are
-                sent back to Earth and used by the planetary science community
-                to create planetary maps. These maps play a crucial role in
-                understanding more about these bodies and their surfaces. For
-                example, the USGS Astrogeology Center helped create the maps
-                used for the Apollo 11 mission landing sites. This is a map of
-                the created by USGS. There are many different tools for
-                scientists to create these maps, but we don’t really have a good
-                tool to view these maps virtually, and our project aims to solve
-                this problem.
+                An important part of space exploration is collecting large 
+                amounts of data and taking images of planetary bodies. 
+                Scientists then create maps of these bodies by using the 
+                images and data collected. These maps play a crucial role in 
+                learning more about a body and its surface. For example, the 
+                USGS Astrogeology Center in Flagstaff helped create the maps 
+                used for the Apollo 11 mission.
+                <br><br>
+                Our client is a small team from the USGS consiting of Trent Hare
+                and Scott Akins. <a href="/#/team">Learn more about them here.</a>
               </div>
             </div>
             <div class="md-layout-item md-size-50 md-xsmall-size-100">
@@ -68,31 +66,35 @@
                 <!-- here you can add your content for tab-content -->
                 <template slot="tab-pane-1">
                   <div class="text-center lg-text">
-                    The USGS team created a planetary mapping application by
-                    modifying OpenLayer v2, an open-source mapping application.
-                    The mapping application has been very useful to many
-                    researchers for displaying USGS’s planetary data but it has
-                    two main drawbacks of OpenLayers:
+                    The problem our project aims to solve is two-fold;
+                    how it affects developers and how it affects scientists.
+                    As for the developers, in 2003, the USGS created an 
+                    interactive mapping tool using the open-source package 
+                    OpenLayers (OL). There are three main problems with the 
+                    OL implemntation:
 
                     <ol class="text-left">
-                      <li>It does not support planetary mapping</li>
-                      <li>
-                        It is not modular or expandable in nature
-                      </li>
+                      <li>It is 13 years old</li>
+                      <li>It is not modular</li>
+                      <li>The development team had to write their own math packages</li>
                     </ol>
-                    All of the maps that USGS created for planets and moons are
-                    currently “faking” the data (modifying the data based on
-                    conversions from one planet or body to Earth's radius) to
-                    map all of these different bodies. This causes the data to
-                    be represented inaccurately. The Openlayers codebase has
-                    updated its code to an entirely new codebase that no longer
-                    supports the code written years ago by USGS. Since their
-                    code is not modular, the USGS development team is having to
-                    rewrite the OpenLayers code to make the planetary maps work
-                    with the updated version of OpenLayers. Their code needs to
-                    be modular so that even if one open-source mapping
-                    application fails or does not support the code anymore, they
-                    will still have a working program.
+                    Because the code is 13 years old and not modular, it is difficult
+                    for the USGS developers to update. They also want to create
+                    more mapping applications, and because the code is not modular,
+                    they would have to rewrite their code every time they create
+                    a new implementation. 
+                    <br><br>
+                    As for the scientists, it is very important that they have 
+                    an application that gives them all the tools they need to 
+                    conduct their research. Currently, there are many map-viewing 
+                    applications on the Internet that scientists may use but 
+                    there are a few fundamental problems with them:
+
+                    <ol class="text-left">
+                      <li>They only support maps of Earth</li>
+                      <li>They do not allow users to change their latitude and longitude settings</li>
+                      <li>They do not allow users to change what projection the current map is in</li>
+                    </ol>
                     <br />
                     <br />
                     <md-button
@@ -106,24 +108,28 @@
                 </template>
                 <template slot="tab-pane-2">
                   <div class="text-center lg-text">
-                    Our envisioned solution is to create a JavaScript node
-                    package containing the required mapping translations that
-                    can be used across multiple mapping applications. We will
+                    Our envisioned solution is to create a JavaScript
+                    package containing the required tranformations that
+                    scientists need when doing research. We will
                     also build a Leaflet mapping application that will use this
-                    package to display maps created by USGS.
+                    package to display maps created by the USGS.
                     <br />
                     <br />
-                    The application will allow users to zoom, move the location
-                    of the view, select an area on the map, see gazetteer names
-                    and symbols on the map, use variable radii, convert between
-                    0:360 and -180:180 longitude ranges, convert between
-                    ographic and ocentric latitudes, and load data layers. The
-                    Leaflet application will connect to the USGS database
-                    containing data on their maps and have an autocomplete
-                    search to find maps from the database. Two end goals of this
-                    project are to have our node package incorporated into the
-                    Leaflet API and to allow the USGS team to use our package in
-                    their OpenLayers implementation.
+                    Our package will contain the extra functionality the USGS 
+                    scientists need to conduct research. This includes code that 
+                    allows users to change the projection of a map and swap 
+                    latitude and longitude settings. This package will be 
+                    modular, allowing it to be used in multiple mapping
+                    applications.
+                    <br />
+                    <br />
+                    Our Leaflet implementation will contain a new, modern GUI
+                    with front-end functionality connecting the latitude and
+                    longitude settings swapper and projection swapper. 
+                    It will also allow users to zoom, move around the map, 
+                    display all the USGS maps, and display surface features
+                    on the map.
+
                   </div>
                 </template>
                 <template slot="tab-pane-3">
