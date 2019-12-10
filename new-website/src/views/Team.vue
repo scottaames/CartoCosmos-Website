@@ -302,6 +302,13 @@
                       >
                         <i class="fas fa-globe"></i>
                       </md-button>
+                      <md-button
+                        href="https://github.com/thareUSGS"
+                        class="md-just-icon md-simple"
+                        target="_blank"
+                      >
+                        <i class="fab fa-github"></i>
+                      </md-button>
                     </md-card-actions>
                   </md-card>
                 </div>
@@ -338,6 +345,13 @@
                         target="_blank"
                       >
                         <i class="fas fa-globe"></i>
+                      </md-button>
+                       <md-button
+                        href="https://github.com/USGSsakins"
+                        class="md-just-icon md-simple"
+                        target="_blank"
+                      >
+                        <i class="fab fa-github"></i>
                       </md-button>
                     </md-card-actions>
                   </md-card>
