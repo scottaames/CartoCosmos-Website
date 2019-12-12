@@ -1,21 +1,29 @@
 <template>
   <div class="wrapper">
-    <parallax class="page-header header-filter" :style="headerStyle"></parallax>
+    <parallax class="page-header header-filter" :style="headerStyle">
+      <div class="md-layout">
+        <div class="md-layout-item">
+          <div class="brand">
+            <h1 class="title text-center">
+              Documentation, <br />Deliverables, <br />and Presentations
+            </h1>
+          </div>
+        </div>
+      </div>
+    </parallax>
     <div class="main main-raised">
       <div class="section">
         <div class="container">
-          <h2 class="title text-center">
-            Documents and Presentations
-          </h2>
-          <h4 class="text-center">
+          <h5 class="title text-center">
             Here are all of the major deliverables and documents for CartoCosmos
             and Leaflet-planetary. These were compiled over the two semesters
             that were alotted for the project from start to finish. This
             provides an in-depth look at the inner workings of the project and
             our team members.
-          </h4>
+          </h5>
           <br />
           <br />
+          <hr class="separator-line" />
           <div class="section tabs-section">
             <div class="container">
               <div class="md-layout">
@@ -40,7 +48,7 @@
                     plain
                     flex-column
                     nav-pills-icons
-                    color-button="rose"
+                    color-button="primary"
                   >
                     <template slot="tab-pane-1" class="pdf-container">
                       <div class="text-center lg-text">
@@ -64,11 +72,11 @@
                         team a little better--where we've been and what we like.
                         <br />
                         <br />
-                        <object
-                          data="./TeamInventory.pdf"
-                          type="application/pdf"
-                        ></object>
                       </div>
+                      <object
+                        data="./TeamInventory.pdf"
+                        type="application/pdf"
+                      ></object>
                     </template>
                     <template slot="tab-pane-3" class="pdf-container">
                       <div class="text-center lg-text">
@@ -77,11 +85,11 @@
                         implementation and possible challenges we might face.
                         <br />
                         <br />
-                        <object
-                          data="./IntroPresentation.pdf"
-                          type="application/pdf"
-                        ></object>
                       </div>
+                      <object
+                        data="./IntroPresentation.pdf"
+                        type="application/pdf"
+                      ></object>
                     </template>
                     <template slot="tab-pane-4" class="pdf-container">
                       <div class="text-center lg-text">
@@ -92,11 +100,11 @@
                         into a singular solution.
                         <br />
                         <br />
-                        <object
-                          data="./Tech_Feasibility.pdf"
-                          type="application/pdf"
-                        ></object>
                       </div>
+                      <object
+                        data="./Tech_Feasibility.pdf"
+                        type="application/pdf"
+                      ></object>
                     </template>
                     <template slot="tab-pane-5" class="pdf-container">
                       <div class="text-center lg-text">
@@ -107,11 +115,11 @@
                         their impact and likelihood.
                         <br />
                         <br />
-                        <object
-                          data="./DesignReview01.pdf"
-                          type="application/pdf"
-                        ></object>
                       </div>
+                      <object
+                        data="./DesignReview01.pdf"
+                        type="application/pdf"
+                      ></object>
                     </template>
                     <template slot="tab-pane-6" class="pdf-container">
                       <div class="text-center lg-text">
@@ -122,11 +130,11 @@
                         environmental requirements and their specifics.
                         <br />
                         <br />
-                        <object
-                          data="./Requirements.pdf"
-                          type="application/pdf"
-                        ></object>
                       </div>
+                      <object
+                        data="./Requirements.pdf"
+                        type="application/pdf"
+                      ></object>
                     </template>
                   </tabs>
                 </div>
@@ -144,14 +152,14 @@ import Tabs from "@/components/Tabs";
 
 export default {
   name: "documents",
-  bodyClass: "documents",
+  //bodyClass: "documents",
   components: {
     Tabs
   },
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/pluto-bg.png")
+      default: require("@/assets/img/pluto-bg.jpg")
     }
   },
   computed: {
@@ -174,7 +182,7 @@ export default {
   background-color: black;
   background-size: contain;
   background-repeat: no-repeat;
-  max-height: 50vh;
+  max-height: 66vh;
 }
 h4.text-center {
   width: 80%;
@@ -182,7 +190,7 @@ h4.text-center {
 }
 
 .lg-text {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.6em;
   width: 100%;
   height: 100%;
@@ -194,10 +202,17 @@ object {
 }
 
 .pdf-container {
-  height: 600px !important;
+  height: 100% !important;
 }
 
 .tabs-section {
-  background-color: #eeeeee;
+  border: 2px;
+}
+
+.separator-line {
+  background-color: #eee;
+  height: 1px;
+  width: 66%;
+  display: block;
 }
 </style>

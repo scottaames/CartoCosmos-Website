@@ -25,7 +25,7 @@
     <div class="main main-raised">
       <div class="section">
         <div class="container">
-          <h2 class="title text-center">Project Introduction</h2>
+          <h2 class="title text-center">Introduction</h2>
           <div class="md-layout">
             <div class="md-layout-item md-size-50 md-xsmall-size-100">
               <div class="vertical-align-text">
@@ -45,7 +45,7 @@
             </div>
             <div class="md-layout-item md-size-50 md-xsmall-size-100">
               <img
-                :src="moonMap"
+                :src="marsMap"
                 alt="Thumbnail Image"
                 class="img-raised rounded"
               />
@@ -55,12 +55,17 @@
       </div>
       <div class="section tabs-section">
         <div class="container">
-          <h2 class="title text-center">Project Details</h2>
+          <h2 class="title text-center">Details</h2>
           <div class="md-layout">
-            <div class="md-layout-item md-size-90 md-small-size-100 mx-auto">
+            <div class="md-layout-item md-size-100 mx-auto">
               <tabs
-                :tab-name="['Issues', 'Solution', 'Requirements']"
-                :tab-icon="['report_problem', 'check_circle', 'list']"
+                :tab-name="[
+                  'Issues',
+                  'Solution',
+                  'Requirements',
+                  'Technologies'
+                ]"
+                :tab-icon="['report_problem', 'check_circle', 'list', 'apps']"
                 plain
                 nav-pills-icons
                 color-button="primary"
@@ -69,10 +74,10 @@
                 <template slot="tab-pane-1">
                   <div class="text-center lg-text">
                     The USGS team created a planetary mapping application by
-                    modifying OpenLayer v2, an open-source mapping application.
-                    The mapping application has been very useful to many
-                    researchers for displaying USGS’s planetary data but it has
-                    two main drawbacks of OpenLayers:
+                    modifying OpenLayer v2 (pictured below), an open-source
+                    mapping application. The mapping application has been very
+                    useful to many researchers for displaying USGS’s planetary
+                    data but it has two main drawbacks of OpenLayers:
 
                     <ol class="text-left">
                       <li>It does not support planetary mapping</li>
@@ -80,20 +85,31 @@
                         It is not modular or expandable in nature
                       </li>
                     </ol>
-                    All of the maps that USGS created for planets and moons are
-                    currently “faking” the data (modifying the data based on
-                    conversions from one planet or body to Earth's radius) to
-                    map all of these different bodies. This causes the data to
-                    be represented inaccurately. The Openlayers codebase has
-                    updated its code to an entirely new codebase that no longer
-                    supports the code written years ago by USGS. Since their
-                    code is not modular, the USGS development team is having to
-                    rewrite the OpenLayers code to make the planetary maps work
-                    with the updated version of OpenLayers. Their code needs to
-                    be modular so that even if one open-source mapping
-                    application fails or does not support the code anymore, they
-                    will still have a working program.
-                    <br />
+                    <div class="md-layout">
+                      <div class="md-layout-item md-size-50 md-xsmall-size-100">
+                        All of the maps that USGS created for planets and moons
+                        are currently “faking” the data (modifying the data
+                        based on conversions from one planet or body to Earth's
+                        radius) to map all of these different bodies. This
+                        causes the data to be represented inaccurately. The
+                        Openlayers codebase has updated its code to an entirely
+                        new codebase that no longer supports the code written
+                        years ago by USGS. Since their code is not modular, the
+                        USGS development team is having to rewrite the
+                        OpenLayers code to make the planetary maps work with the
+                        updated version of OpenLayers. Their code needs to be
+                        modular so that even if one open-source mapping
+                        application fails or does not support the code anymore,
+                        they will still have a working program.
+                      </div>
+                      <div class="md-layout-item md-size-50 md-xsmall-size-100">
+                        <img
+                          :src="moonMap"
+                          alt="Thumbnail Image"
+                          class="img-raised rounded"
+                        />
+                      </div>
+                    </div>
                     <br />
                     <md-button
                       href="https://planetarymapping.wr.usgs.gov/Target/project/Moon"
@@ -105,25 +121,39 @@
                   </div>
                 </template>
                 <template slot="tab-pane-2">
-                  <div class="text-center lg-text">
-                    Our envisioned solution is to create a JavaScript node
-                    package containing the required mapping translations that
-                    can be used across multiple mapping applications. We will
-                    also build a Leaflet mapping application that will use this
-                    package to display maps created by USGS.
-                    <br />
-                    <br />
-                    The application will allow users to zoom, move the location
-                    of the view, select an area on the map, see gazetteer names
-                    and symbols on the map, use variable radii, convert between
-                    0:360 and -180:180 longitude ranges, convert between
-                    ographic and ocentric latitudes, and load data layers. The
-                    Leaflet application will connect to the USGS database
-                    containing data on their maps and have an autocomplete
-                    search to find maps from the database. Two end goals of this
-                    project are to have our node package incorporated into the
-                    Leaflet API and to allow the USGS team to use our package in
-                    their OpenLayers implementation.
+                  <div class="md-layout">
+                    <div class="md-layout-item md-size-50 md-xsmall-size-100">
+                      <div class="text-center lg-text">
+                        Our envisioned solution is to create a JavaScript node
+                        package containing the required mapping translations
+                        that can be used across multiple mapping applications.
+                        We will also build a Leaflet mapping application that
+                        will use this package to display maps created by USGS.
+                        <br />
+                        The application will allow users to zoom, move the
+                        location of the view, select an area on the map, see
+                        gazetteer names and symbols on the map, use variable
+                        radii, convert between 0:360 and -180:180 longitude
+                        ranges, convert between ographic and ocentric latitudes,
+                        and load data layers. The Leaflet application will
+                        connect to the USGS database containing data on their
+                        maps and have an autocomplete search to find maps from
+                        the database. Two end goals of this project are to have
+                        our node package incorporated into the Leaflet API and
+                        to allow the USGS team to use our package in their
+                        OpenLayers implementation.
+                        <div class="text-center lg-text"></div>
+                        <div
+                          class="md-layout-item md-size-50 md-xsmall-size-100"
+                        >
+                          <img
+                            :src="solutionPic"
+                            alt="Thumbnail Image"
+                            class="img-raised rounded"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </template>
                 <template slot="tab-pane-3">
@@ -151,6 +181,84 @@
                     <a href="/documents">located here.</a>
                   </div>
                 </template>
+                <template slot="tab-pane-4">
+                  <div class="team text-center">
+                    <div class="md-layout">
+                      <div
+                        class="md-layout-item md-medium-size-33 md-small-size-100"
+                      >
+                        <div class="team-player">
+                          <md-card class="md-card-plain">
+                            <div class="md-layout-item md-size-100 mx-auto">
+                              <img
+                                :src="babelLogo"
+                                alt="Thumbnail Image"
+                                class="rounded img-fluid babel-pic"
+                              />
+                            </div>
+                            <h4 class="card-title">Babel</h4>
+                            <md-card-content>
+                              <p class="card-description">
+                                Babel is a toolchain that we will use to convert
+                                ECMAScript into a backwards compatible version
+                                of JavaScript for use in current and older
+                                browsers or environments.
+                              </p>
+                            </md-card-content>
+                          </md-card>
+                        </div>
+                      </div>
+                      <div
+                        class="md-layout-item md-medium-size-33 md-small-size-100"
+                      >
+                        <div class="team-player">
+                          <md-card class="md-card-plain">
+                            <div class="md-layout-item md-size-100 mx-auto">
+                              <img
+                                :src="jupyterLogo"
+                                alt="Thumbnail Image"
+                                class="rounded img-fluid jupyter-pic"
+                              />
+                            </div>
+                            <h4 class="card-title">Jupyter Notebook</h4>
+                            <md-card-content>
+                              <p class="card-description">
+                                We intend to make our project compatible with
+                                Jupyter Notebooks for ease of future development
+                                and use by the USGS community of researchers and
+                                scientists.
+                              </p>
+                            </md-card-content>
+                          </md-card>
+                        </div>
+                      </div>
+                      <div
+                        class="md-layout-item md-medium-size-33 md-small-size-100"
+                      >
+                        <div class="team-player">
+                          <md-card class="md-card-plain">
+                            <div class="md-layout-item md-size-100 mx-auto">
+                              <img
+                                :src="leafletLogo"
+                                alt="Thumbnail Image"
+                                class="rounded img-fluid leaflet-pic"
+                              />
+                            </div>
+                            <h4 class="card-title">Leaflet</h4>
+                            <md-card-content>
+                              <p class="card-description">
+                                Leaflet is the core JavaScript library we are
+                                building off of. It is just 38 KB, is
+                                mobile-friendly, interactive, and has all the
+                                mapping features most developers ever need.
+                              </p>
+                            </md-card-content>
+                          </md-card>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </template>
               </tabs>
             </div>
           </div>
@@ -167,7 +275,7 @@ export default {
     Tabs
   },
   name: "detailspage",
-  bodyClass: "details-page",
+  //bodyClass: "details-page",
   props: {
     header: {
       type: String,
@@ -176,6 +284,26 @@ export default {
     moonMap: {
       type: String,
       default: require("@/assets/img/usgs-moon-map.jpg")
+    },
+    marsMap: {
+      type: String,
+      default: require("@/assets/img/leaflet-mars-map.png")
+    },
+    solutionPic: {
+      type: String,
+      default: require("@/assets/img/solution.png")
+    },
+    leafletLogo: {
+      type: String,
+      default: require("@/assets/img/leaflet-logo.png")
+    },
+    jupyterLogo: {
+      type: String,
+      default: require("@/assets/img/jupyter-logo.png")
+    },
+    babelLogo: {
+      type: String,
+      default: require("@/assets/img/babel-logo.svg")
     }
   },
   computed: {
@@ -198,13 +326,24 @@ ol.text-left {
   display: table-cell;
   height: 450px;
   vertical-align: middle;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.7em;
   text-align: center;
+  padding: 10px;
 }
 
-.section {
-  padding: 70px 0;
+.babel-pic {
+  //height: 60%;
+  width: 75%;
+}
+.jupyter-pic {
+  //height: 100%;
+  width: 35%;
+}
+.leaflet-pic {
+  padding-top: 25px;
+  height: 100%;
+  //width: 100%;
 }
 
 .lg-text {
@@ -221,5 +360,12 @@ ol.text-left {
   &::before {
     background: rgba(0, 0, 0, 0.2);
   }
+}
+
+.separator-line {
+  background-color: #eee;
+  height: 1px;
+  width: 66%;
+  display: block;
 }
 </style>
