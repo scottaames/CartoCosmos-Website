@@ -11,13 +11,6 @@
             </h4>
             <br />
           </div>
-          <!--           <md-button
-            href="/details"
-            class="md-button md-lg md-upgrade"
-            target="_blank"
-          >
-            <i class="material-icons">map</i>Learn More
-          </md-button> -->
         </div>
       </div>
     </parallax>
@@ -32,16 +25,32 @@
               <h5 class="description">
                 Leaflet for planetary mapping (Leaflet-planetary for short) is a
                 plugin extension for
-                <a href="https://leafletjs.com/">Leaflet</a> that supports
-                mapping of planetary data sets. Our goal is to provide support
-                to the planetary science community and their exploration of the
-                solar system and beyond. This project is a senior capstone
-                project by students at Northern Arizona University in Flagstaff,
-                AZ, sponsored by the United States Geological Survey (USGS)
-                Astrogeology Center, a NASA subsidiary.
+                <a href="https://leafletjs.com/" target="_blank">Leaflet</a>
+                that supports mapping of planetary data sets. Our goal is to
+                provide support to the planetary science community and their
+                exploration of the solar system and beyond. This is a senior
+                capstone project by Scott Ames, Kaitlyn Lee, Jacob Kaufman, and
+                Christopher Moore, with mentoring from Isaac Shaffer, at
+                Northern Arizona University in Flagstaff, AZ. We are proudly
+                sponsored by the United States Geological Survey (USGS)
+                Astrogeology Science Center, a NASA subsidiary.
               </h5>
             </div>
           </div>
+          <div class="md-layout">
+            <div class="md-layout-item md-size-100 mx-auto text-center">
+              <md-button
+                href="/team"
+                class="md-button md-success md-lg md-upgrade"
+              >
+                <md-icon>people_alt</md-icon>Meet the Team
+              </md-button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section feature-section">
+        <div class="container">
           <div class="features text-center">
             <div class="md-layout">
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
@@ -58,7 +67,7 @@
               </div>
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="info">
-                  <div class="icon icon-success">
+                  <div class="icon icon-primary">
                     <md-icon>more</md-icon>
                   </div>
                   <h4 class="info-title">Custom Functionality</h4>
@@ -69,12 +78,11 @@
 
                   <ul class="text-left">
                     <li>Latitude and longitude switcher</li>
-                    <li>Scale bar and Zoom</li>
+                    <li>Scale bar and zoom</li>
                     <li>Projection switcher</li>
                     <li>Layer switcher</li>
-                    <li>Surface Feature Overlay</li>
+                    <li>Surface feature overlay</li>
                   </ul>
-                  ...and <a href="/detailspage">more.</a>
                 </div>
               </div>
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
@@ -84,8 +92,8 @@
                   </div>
                   <h4 class="info-title">Compatability</h4>
                   <p>
-                    Built with portability, compatibility, and extendability in
-                    mind. Support for all modern web browsers and compatibile
+                    Built with portability, compatibility, and extensibility in
+                    mind. We will support for all modern web browsers and be compatible
                     with The Jupyter Notebook to facilitate data sharing between
                     users.
                   </p>
@@ -97,15 +105,14 @@
             <div class="md-layout-item md-size-50 md-small-size-100 mx-auto">
               <div class="btn-container">
                 <md-button
-                  href="/#/detailspage""
-                  class="md-button md-primary md-lg md-upgrade"
-                  target="_blank"
+                  to="/detailspage"
+                  class="md-button md-success md-lg md-upgrade"
                 >
                   <md-icon>info</md-icon>Learn More
                 </md-button>
                 <md-button
-                  class="md-button md-primary md-lg md-upgrade"
-                  href="https://github.com/scottaames/CartoCosmos"
+                  class="md-button md-success md-lg md-upgrade"
+                  href="https://github.com/CartoCosmos/CartoCosmos.github.io"
                   target="_blank"
                 >
                   <i class="fab fa-github"></i>
@@ -114,6 +121,28 @@
                     >Check out our project on GitHub</md-tooltip
                   >
                 </md-button>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <div class="container">
+              <h2 class="title text-center">
+                Leaflet-planetary Demo
+              </h2>
+              <h4 class="text-center">
+                This is a glimpse of what our project will look like and how it
+                will function, but it is far from our final product. The map
+                below is of Mars.
+              </h4>
+              <div class="md-layout">
+                <div class="md-layout-item md-size-100">
+                  <div class="map-container text-center">
+                    <object
+                      data="./leaflet/example/map.html"
+                      type="image/gif"
+                    ></object>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -151,5 +180,26 @@ export default {
 }
 ul.text-left {
   margin-left: 3rem;
+}
+.separator-line {
+  background-color: #eee;
+  height: 1px;
+  width: 66%;
+  display: block;
+}
+.feature-section {
+  padding-top: 0 !important;
+}
+
+object {
+  height: 100vh !important;
+  width: 80% !important;
+  //margin: 0 auto !important;
+  margin-left: 50px;
+}
+
+.map-container {
+  height: 100% !important;
+  width: 100% !important;
 }
 </style>

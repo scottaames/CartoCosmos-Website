@@ -1,11 +1,18 @@
 <template>
   <div class="wrapper">
     <parallax class="page-header header-filter" :style="headerStyle">
+      <div class="md-layout">
+        <div class="md-layout-item">
+          <div class="brand">
+            <h1 class="title">Meet the CartoCosmos Team</h1>
+          </div>
+        </div>
+      </div>
     </parallax>
     <div class="main main-raised">
       <div class="section text-center">
         <div class="container">
-          <h2 class="title">Meet the Team</h2>
+          <h2 class="title">CartoCosmos Team Members</h2>
           <div class="team">
             <div class="md-layout">
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
@@ -29,10 +36,10 @@
                     <md-card-content>
                       <p class="card-description">
                         Kaitlyn is originally from Lake Havasu, Arizona, and is
-                        graduating with a bachelor's degree in math and computer
+                        graduating with two bachelors' degrees in math and computer
                         science in May of 2020. Kaitlyn currently works at the
                         United States Geological Survey as a Software
-                        Development. She enjoys programming, playing
+                        Developer. She enjoys programming, playing
                         games with friends and family, watching soccer, playing
                         basketball, and learning about our solar system.
                       </p>
@@ -141,25 +148,11 @@
 
                     <md-card-actions class="text-center">
                       <md-button
-                        href="javascript:void(0)"
+                        href="https://github.com/jkaufy"
                         class="md-just-icon md-simple"
                         target="_blank"
                       >
-                        <i class="fab fa-twitter"></i>
-                      </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram"></i>
-                      </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-square"></i>
+                        <i class="fab fa-github"></i>
                       </md-button>
                     </md-card-actions>
                   </md-card>
@@ -194,29 +187,7 @@
                       </p>
                     </md-card-content>
 
-                    <md-card-actions class="text-center">
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                        target="_blank"
-                      >
-                        <i class="fab fa-twitter"></i>
-                      </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                        target="_blank"
-                      >
-                        <i class="fab fa-instagram"></i>
-                      </md-button>
-                      <md-button
-                        href="javascript:void(0)"
-                        class="md-just-icon md-simple"
-                        target="_blank"
-                      >
-                        <i class="fab fa-facebook-square"></i>
-                      </md-button>
-                    </md-card-actions>
+                    <md-card-actions class="text-center"></md-card-actions>
                   </md-card>
                 </div>
               </div>
@@ -226,7 +197,7 @@
       </div>
       <div class="section text-center">
         <div class="container">
-          <h2 class="title">Project Sponsors and Mentor</h2>
+          <h2 class="title">Mentor and Project Sponsors</h2>
           <div class="team">
             <div class="md-layout">
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
@@ -346,7 +317,8 @@
                       >
                         <i class="fas fa-globe"></i>
                       </md-button>
-                       <md-button
+
+                      <md-button
                         href="https://github.com/USGSsakins"
                         class="md-just-icon md-simple"
                         target="_blank"
@@ -423,7 +395,12 @@ export default {
 
 <style lang="scss" scoped>
 .page-header {
-  max-height: 50vh;
+  max-height: 66vh;
+}
+
+.team-pic {
+  width: 85%;
+  height: 85%;
 }
 
 .md-card-actions.text-center {
@@ -431,11 +408,17 @@ export default {
   justify-content: center !important;
 }
 h4 {
-  font-size: 1.3em;
+  font-size: 1.1em;
   line-height: 1.7em;
 }
 p {
-  font-size: 1.3em;
+  font-size: 1.1em;
   line-height: 1.7em;
+}
+.separator-line {
+  background-color: #eee;
+  height: 1px;
+  width: 66%;
+  display: block;
 }
 </style>

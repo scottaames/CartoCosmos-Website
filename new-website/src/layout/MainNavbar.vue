@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <!-- <img class="logo" :src="logo" alt="Logo" /> -->
+        <img class="logo" :src="logo" alt="Logo" />
         <h1 class="md-title">CartoCosmos</h1>
       </div>
       <div class="md-toolbar-section-end">
@@ -26,9 +26,10 @@
           <div class="md-collapse-wrapper">
             <md-list>
               <li class="md-list-item">
-                <a
-                  href="/"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                <router-link
+                  exact
+                  to="/"
+                  class="md-list-item-router md-list-item-container md-button-clean"
                 >
                   <div class="md-list-item-content">
                     <md-button
@@ -39,12 +40,12 @@
                       <p>Home</p>
                     </md-button>
                   </div>
-                </a>
+                </router-link>
               </li>
               <li class="md-list-item">
-                <a
-                  href="/#/detailspage"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                <router-link
+                  to="/detailspage"
+                  class="md-list-item-router md-list-item-container md-button-clean"
                 >
                   <div class="md-list-item-content">
                     <md-button
@@ -55,12 +56,12 @@
                       <p>Project Details</p>
                     </md-button>
                   </div>
-                </a>
+                </router-link>
               </li>
               <li class="md-list-item">
-                <a
-                  href="/#/team"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                <router-link
+                  to="/team"
+                  class="md-list-item-router md-list-item-container md-button-clean"
                 >
                   <div class="md-list-item-content">
                     <md-button
@@ -71,12 +72,12 @@
                       <p>Our Team</p>
                     </md-button>
                   </div>
-                </a>
+                </router-link>
               </li>
               <li class="md-list-item">
-                <a
-                  href="/#/schedule"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                <router-link
+                  to="/schedule"
+                  class="md-list-item-router md-list-item-container md-button-clean"
                 >
                   <div class="md-list-item-content">
                     <md-button
@@ -87,12 +88,12 @@
                       <p>Schedule</p>
                     </md-button>
                   </div>
-                </a>
+                </router-link>
               </li>
               <li class="md-list-item">
-                <a
-                  href="/#/documents"
-                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                <router-link
+                  to="/documents"
+                  class="md-list-item-router md-list-item-container md-button-clean"
                 >
                   <div class="md-list-item-content">
                     <md-button
@@ -103,7 +104,7 @@
                       <p>Documentation</p>
                     </md-button>
                   </div>
-                </a>
+                </router-link>
               </li>
 
               <md-list-item
@@ -138,11 +139,8 @@ function resizeThrottler(actualResizeHandler) {
   }
 }
 
-import MobileMenu from "@/layout/MobileMenu";
 export default {
-  components: {
-    MobileMenu
-  },
+  components: {},
   props: {
     type: {
       type: String,
@@ -229,4 +227,8 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.logo {
+  width: 2em;
+}
+</style>

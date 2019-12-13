@@ -1,177 +1,161 @@
 <template>
   <div class="wrapper">
-    <parallax class="page-header header-filter" :style="headerStyle"></parallax>
+    <parallax class="page-header header-filter" :style="headerStyle">
+      <div class="md-layout">
+        <div class="md-layout-item">
+          <div class="brand">
+            <h1 class="title text-center">
+              Documentation, <br />Deliverables, <br />and Presentations
+            </h1>
+          </div>
+        </div>
+      </div>
+    </parallax>
     <div class="main main-raised">
-      <div class="section text-center">
+      <div class="section">
         <div class="container">
-          <h2 class="title">Documents and Presentations</h2>
+          <h5 class="title text-center">
+            Here are all of the major deliverables and documents for CartoCosmos
+            and Leaflet-planetary. These were compiled over the two semesters
+            that were alotted for the project from start to finish. This
+            provides an in-depth look at the inner workings of the project and
+            our team members.
+          </h5>
+          <br />
+          <br />
+          <hr class="separator-line" />
           <div class="section tabs-section">
             <div class="container">
-              <h2 class="title text-center">Project Details</h2>
               <div class="md-layout">
-                <div
-                  class="md-layout-item md-size-90 md-small-size-100 mx-auto"
-                >
+                <div class="md-layout-item md-size-100 mx-auto">
                   <tabs
-                    :tab-name="['Issues', 'Solution', 'Requirements']"
-                    :tab-icon="['report_problem', 'check_circle', 'list']"
+                    :tab-name="[
+                      'Team Standards',
+                      'Team Inventory',
+                      'Mini Intro.',
+                      'Tech Feasibility',
+                      'Design Review 1',
+                      'Requirements',
+                      'Tech Demo Memo'
+                    ]"
+                    :tab-icon="[
+                      'people_alt',
+                      'archive',
+                      'present_to_all',
+                      'poll',
+                      'build',
+                      'work',
+                      'build'
+                    ]"
                     plain
+                    flex-column
                     nav-pills-icons
                     color-button="primary"
                   >
-                    <!-- here you can add your content for tab-content -->
-                    <template slot="tab-pane-1"> </template>
-                    <template slot="tab-pane-2">
+                    <template slot="tab-pane-1" class="pdf-container">
                       <div class="text-center lg-text">
-                        Our envisioned solution is to create a JavaScript node
-                        package containing the required mapping translations
-                        that can be used across multiple mapping applications.
-                        We will also build a Leaflet mapping application that
-                        will use this package to display maps created by USGS.
+                        The Team Standards lays down the roles of each of our
+                        team members in detail and the guidelines and rules we
+                        have established with the intention of holding ourselves
+                        and each other accountable over the course of this
+                        project.
                         <br />
                         <br />
-                        The application will allow users to zoom, move the
-                        location of the view, select an area on the map, see
-                        gazetteer names and symbols on the map, use variable
-                        radii, convert between 0:360 and -180:180 longitude
-                        ranges, convert between ographic and ocentric latitudes,
-                        and load data layers. The Leaflet application will
-                        connect to the USGS database containing data on their
-                        maps and have an autocomplete search to find maps from
-                        the database. Two end goals of this project are to have
-                        our node package incorporated into the Leaflet API and
-                        to allow the USGS team to use our package in their
-                        OpenLayers implementation.
                       </div>
+                      <object
+                        data="./TeamStandards.pdf"
+                        type="application/pdf"
+                      ></object>
                     </template>
-                    <template slot="tab-pane-3">
+                    <template slot="tab-pane-2" class="pdf-container">
                       <div class="text-center lg-text">
-                        From a user-level perspective, we have identified three
-                        domain-level requirements that our project needs to
-                        satisfy:
-
-                        <ol class="text-left">
-                          <li>
-                            We must deliver an application that displays
-                            planetary data through an interactive viewer that is
-                            embedded in a web-based environment.
-                          </li>
-                          <li>
-                            The application must accomplish the primary goal of
-                            being research-driven in nature.
-                          </li>
-                          <li>
-                            We must create a portable package that can be used
-                            across multiple mapping applications.
-                          </li>
-                        </ol>
-                        You can see more in depth requirements for the project
-                        in our requirements document
-                        <a href="/documents">located here.</a>
+                        The Team Inventory contains biographies of our team
+                        members. For those interested in getting to know our
+                        team a little better--where we've been and what we like.
+                        <br />
+                        <br />
                       </div>
+                      <object
+                        data="./TeamInventory.pdf"
+                        type="application/pdf"
+                      ></object>
+                    </template>
+                    <template slot="tab-pane-3" class="pdf-container">
+                      <div class="text-center lg-text">
+                        The Introductory Presentation is a short introduction to
+                        our project along with our initial thoughts on
+                        implementation and possible challenges we might face.
+                        <br />
+                        <br />
+                      </div>
+                      <object
+                        data="./IntroPresentation.pdf"
+                        type="application/pdf"
+                      ></object>
+                    </template>
+                    <template slot="tab-pane-4" class="pdf-container">
+                      <div class="text-center lg-text">
+                        The Technolgical Feasibility is an assessment of the
+                        project. It evaluates and breaks down the expected
+                        technolgical challenges, what our solutions are to the
+                        challenges, and how we plan to integrate each of them
+                        into a singular solution.
+                        <br />
+                        <br />
+                      </div>
+                      <object
+                        data="./Tech_Feasibility.pdf"
+                        type="application/pdf"
+                      ></object>
+                    </template>
+                    <template slot="tab-pane-5" class="pdf-container">
+                      <div class="text-center lg-text">
+                        The first Design Review presentation where we present
+                        our findings from the Technolgical Feasibility and
+                        Requirements Documents, in addition to the potential
+                        risks during development and how we plan to alleviate
+                        their impact and likelihood.
+                        <br />
+                        <br />
+                      </div>
+                      <object
+                        data="./DesignReview01.pdf"
+                        type="application/pdf"
+                      ></object>
+                    </template>
+                    <template slot="tab-pane-6" class="pdf-container">
+                      <div class="text-center lg-text">
+                        The Requirements document contains a detailed
+                        examination of the requirements for the project. It
+                        contains top-level functionality which is broken down
+                        into the functional, non-functional (performance), and
+                        environmental requirements and their specifics.
+                        <br/>
+                        <br/>
+                      </div>
+                      <object
+                        data="./Requirements.pdf"
+                        type="application/pdf"
+                      ></object>
+                    </template>
+                    <template slot="tab-pane-7" class="pdf-container">
+                      <div class="text-center lg-text">
+                        The Technogical Demo Memo describes the challenges
+                        we aimed to solve in our demo and how we plan on
+                        solving them.
+                        <br/>
+                        <br/>
+                      </div>
+                      <object
+                        data="./Demo1.pdf"
+                        type="application/pdf"
+                      ></object>
                     </template>
                   </tabs>
                 </div>
               </div>
             </div>
           </div>
-          <!-- <div class="md-layout">
-            <div class="md-layout-item md-size-66 mx-auto md-small-size-100">
-              <md-card>
-                <carousel
-                  :per-page="1"
-                  loop
-                  :speed="700"
-                  autoplay
-                  :autoplay-timeout="5000"
-                  :mouse-drag="false"
-                  navigationEnabled
-                  navigationNextLabel="<i class='material-icons'>keyboard_arrow_right</i>"
-                  navigationPrevLabel="<i class='material-icons'>keyboard_arrow_left</i>"
-                >
-                  <slide>
-                    <div class="carousel-caption">
-                      <h4>
-                        <md-icon>location_on</md-icon>
-                        Somewhere Beyond, United States
-                      </h4>
-                    </div>
-                    <object
-                      data="src/assets/docs/capstoneProjectPropsal.pdf"
-                      type="application/pdf"
-                    >
-                    </object>
-                  </slide>
-                  <slide>
-                    <div class="carousel-caption">
-                      <h4>
-                        <md-icon>location_on</md-icon>
-                        Yellowstone National Park, United States
-                      </h4>
-                    </div>
-                    <object
-                      data="src/assets/docs/TeamStandards.pdf"
-                      type="application/pdf"
-                    >
-                    </object>
-                  </slide>
-                  <slide>
-                    <div class="carousel-caption">
-                      <h4>
-                        <md-icon>location_on</md-icon>
-                        Yellowstone National Park, United States
-                      </h4>
-                    </div>
-                    <object
-                      data="src/assests/docs/TeamInventory.pdf"
-                      type="application/pdf"
-                    >
-                    </object>
-                  </slide>
-                  <slide>
-                    <div class="carousel-caption">
-                      <h4>
-                        <md-icon>location_on</md-icon>
-                        Yellowstone National Park, United States
-                      </h4>
-                    </div>
-                    <object
-                      data="src/assests/docs/IntroPresentation.pdf"
-                      type="application/pdf"
-                    >
-                    </object>
-                  </slide>
-                  <slide>
-                    <div class="carousel-caption">
-                      <h4>
-                        <md-icon>location_on</md-icon>
-                        Yellowstone National Park, United States
-                      </h4>
-                    </div>
-                    <object
-                      data="src/assests/docs/Tech_Feasibility.pdf"
-                      type="application/pdf"
-                    >
-                    </object>
-                  </slide>
-                  <slide>
-                    <div class="carousel-caption">
-                      <h4>
-                        <md-icon>location_on</md-icon>
-                        Yellowstone National Park, United States
-                      </h4>
-                    </div>
-                    <object
-                      data="src/assests/docs/DesignReview01.pdf"
-                      type="application/pdf"
-                    >
-                    </object>
-                  </slide>
-                </carousel>
-              </md-card>
-            </div>
-          </div>
-      </div> -->
         </div>
       </div>
     </div>
@@ -183,14 +167,14 @@ import Tabs from "@/components/Tabs";
 
 export default {
   name: "documents",
-  bodyClass: "documents",
+  //bodyClass: "documents",
   components: {
     Tabs
   },
   props: {
     header: {
       type: String,
-      default: require("@/assets/img/pluto-bg.png")
+      default: require("@/assets/img/pluto-bg.jpg")
     }
   },
   computed: {
@@ -213,9 +197,37 @@ export default {
   background-color: black;
   background-size: contain;
   background-repeat: no-repeat;
-  max-height: 50vh;
+  max-height: 66vh;
 }
-.section {
-  padding: 70px 0;
+h4.text-center {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.lg-text {
+  font-size: 1.1em;
+  line-height: 1.6em;
+  width: 100%;
+  height: 100%;
+  //margin: 0 auto;
+}
+object {
+  height: 42em !important;
+  width: 100% !important;
+}
+
+.pdf-container {
+  height: 100% !important;
+}
+
+.tabs-section {
+  border: 2px;
+}
+
+.separator-line {
+  background-color: #eee;
+  height: 1px;
+  width: 66%;
+  display: block;
 }
 </style>

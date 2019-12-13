@@ -25,7 +25,7 @@
     <div class="main main-raised">
       <div class="section">
         <div class="container">
-          <h2 class="title text-center">Project Introduction</h2>
+          <h2 class="title text-center">Introduction</h2>
           <div class="md-layout">
             <div class="md-layout-item md-size-50 md-xsmall-size-100">
               <div class="vertical-align-text">
@@ -34,16 +34,19 @@
                 Scientists then create maps of these bodies by using the 
                 images and data collected. These maps play a crucial role in 
                 learning more about a body and its surface. For example, the 
-                USGS Astrogeology Center in Flagstaff helped create the maps 
-                used for the Apollo 11 mission.
+                USGS Astrogeology Science Center (ASC) helped create the maps 
+                used for the Apollo 11 mission, and you can see an example
+                on the right.
                 <br><br>
-                Our client is a small team from the USGS consiting of Trent Hare
+                Our client is a small team from the USGS consisting of Trent Hare
                 and Scott Akins. <a href="/#/team">Learn more about them here.</a>
+                They both work for the ASC, where both developers and scientists
+                work together to support the planetary science community.
               </div>
             </div>
             <div class="md-layout-item md-size-50 md-xsmall-size-100">
               <img
-                :src="moonMap"
+                :src="usgsMap"
                 alt="Thumbnail Image"
                 class="img-raised rounded"
               />
@@ -53,12 +56,17 @@
       </div>
       <div class="section tabs-section">
         <div class="container">
-          <h2 class="title text-center">Project Details</h2>
+          <h2 class="title text-center">Details</h2>
           <div class="md-layout">
-            <div class="md-layout-item md-size-90 md-small-size-100 mx-auto">
+            <div class="md-layout-item md-size-100 mx-auto">
               <tabs
-                :tab-name="['Issues', 'Solution', 'Requirements']"
-                :tab-icon="['report_problem', 'check_circle', 'list']"
+                :tab-name="[
+                  'Issues',
+                  'Solution',
+                  'Requirements',
+                  'Technologies'
+                ]"
+                :tab-icon="['report_problem', 'check_circle', 'list', 'apps']"
                 plain
                 nav-pills-icons
                 color-button="primary"
@@ -66,36 +74,37 @@
                 <!-- here you can add your content for tab-content -->
                 <template slot="tab-pane-1">
                   <div class="text-center lg-text">
-                    The problem our project aims to solve is two-fold;
-                    how it affects developers and how it affects scientists.
-                    As for the developers, in 2003, the USGS created an 
-                    interactive mapping tool using the open-source package 
-                    OpenLayers (OL). There are three main problems with the 
-                    OL implemntation:
+                    <div class="md-layout">
+                        <div class="md-layout-item md-size-50 md-xsmall-size-100">
+                        Scientists have many different applications that aid
+                        them in the map-making process; however, there are not
+                        many interactive tools they can use to view maps. 
+                        It is very important that these scientists 
+                        have a mapping application they can use to complete
+                        their research. Currently, there are a few mapping 
+                        applications that they may use, but there are 
+                        problems with them:
 
-                    <ol class="text-left">
-                      <li>It is 13 years old</li>
-                      <li>It is not modular</li>
-                      <li>The development team had to write their own math packages</li>
-                    </ol>
-                    Because the code is 13 years old and not modular, it is difficult
-                    for the USGS developers to update. They also want to create
-                    more mapping applications, and because the code is not modular,
-                    they would have to rewrite their code every time they create
-                    a new implementation. 
-                    <br><br>
-                    As for the scientists, it is very important that they have 
-                    an application that gives them all the tools they need to 
-                    conduct their research. Currently, there are many map-viewing 
-                    applications on the Internet that scientists may use but 
-                    there are a few fundamental problems with them:
+                        <ol class="text-left">
+                          <li>They only support maps of Earth</li>
+                          <li>They do not allow users to change their latitude and longitude settings</li>
+                          <li>They do not allow users to change what projection the current map is in</li>
+                        </ol>
 
-                    <ol class="text-left">
-                      <li>They only support maps of Earth</li>
-                      <li>They do not allow users to change their latitude and longitude settings</li>
-                      <li>They do not allow users to change what projection the current map is in</li>
-                    </ol>
-                    <br />
+                        USGS has a mapping application that scientists can use,
+                        which can be seen to the right, but it is outdated.
+                        USGS wants to update this application, but
+                        the code itself is not modular, making it difficult 
+                        to update.
+                      </div>
+                      <div class="md-layout-item md-size-50 md-xsmall-size-100">
+                        <img
+                          :src="moonMap"
+                          alt="Thumbnail Image"
+                          class="img-raised rounded"
+                        />
+                      </div>
+                    </div>
                     <br />
                     <md-button
                       href="https://planetarymapping.wr.usgs.gov/Target/project/Moon"
@@ -107,33 +116,67 @@
                   </div>
                 </template>
                 <template slot="tab-pane-2">
-                  <div class="text-center lg-text">
-                    Our envisioned solution is to create a JavaScript
-                    package containing the required tranformations that
-                    scientists need when doing research. We will
-                    also build a Leaflet mapping application that will use this
-                    package to display maps created by the USGS.
-                    <br />
-                    <br />
-                    Our package will contain the extra functionality the USGS 
-                    scientists need to conduct research. This includes code that 
-                    allows users to change the projection of a map and swap 
-                    latitude and longitude settings. This package will be 
-                    modular, allowing it to be used in multiple mapping
-                    applications.
-                    <br />
-                    <br />
-                    Our Leaflet implementation will contain a new, modern GUI
-                    with front-end functionality connecting the latitude and
-                    longitude settings swapper and projection swapper. 
-                    It will also allow users to zoom, move around the map, 
-                    display all the USGS maps, and display surface features
-                    on the map.
+                  <div class="md-layout">
+                    <div class="md-layout-item md-size-50 md-xsmall-size-100">
+                      <div class="text-center lg-text">
+                        Our envisioned solution is to build a new
+                        interactive map that contains the extra functionality 
+                        needed by the USGS scientists.
+                        <br />
+                        <br />
 
+                        We will use Leaflet, an open-source mapping package, to build
+                        our map. This Leaflet implementation will support more bodies 
+                        than just Earth, will be able to swap projections, and will 
+                        display the mouse's latitude and longitude. In order to
+                        support more projections, we will be using a library called
+                        PROJ that is widely-supported by the planetary science
+                        community. This library allows users to define projections
+                        and easily transform between them. Our diagram on the right
+                        demonstrates that we will be using PROJ to transform
+                        the map into its correct projection. Because we are
+                        using PROJ, we will not need to write and test our own code.
+                        <br />
+                        <br />
+
+                        Our implementation will also contain a new, modern GUI
+                        with front-end functionality connecting the latitude and
+                        longitude and projection swapper. 
+                        It will also allow users to zoom, move around the map, 
+                        display all the USGS maps, and display surface features
+                        on the map.
+                        <br />
+                        <br />
+                        
+                        Alongside this map, we will
+                        create a modular package that contains the back-end for the 
+                        added functionality described above. Since this package
+                        will be modular, it will be able to be used in any mapping
+                        tool, including USGS's current outdated one. 
+                        <br />
+                        <br />
+                      
+                      </div>
+                    </div>
+                    <div class="text-center lg-text"></div>
+                        <div
+                          class="md-layout-item md-size-25 md-xsmall-size-100"
+                        >
+                          <img
+                            :src="solutionPic"
+                            alt="Thumbnail Image"
+                            class="img-raised rounded"
+                          />
+                        </div>
                   </div>
                 </template>
                 <template slot="tab-pane-3">
                   <div class="text-center lg-text">
+                    Through bi-weekly meetings with the USGS team and
+                    Gitter messages/emails, we have aqcuired the requirements
+                    of this project.
+                    <br>
+                    <br>
                     From a user-level perspective, we have identified three
                     domain-level requirements that our project needs to satisfy:
 
@@ -157,6 +200,84 @@
                     <a href="/documents">located here.</a>
                   </div>
                 </template>
+                <template slot="tab-pane-4">
+                  <div class="team text-center">
+                    <div class="md-layout">
+                      <div
+                        class="md-layout-item md-medium-size-33 md-small-size-100"
+                      >
+                        <div class="team-player">
+                          <md-card class="md-card-plain">
+                            <div class="md-layout-item md-size-100 mx-auto">
+                              <img
+                                :src="babelLogo"
+                                alt="Thumbnail Image"
+                                class="rounded img-fluid babel-pic"
+                              />
+                            </div>
+                            <h4 class="card-title">Babel</h4>
+                            <md-card-content>
+                              <p class="card-description">
+                                Babel is a toolchain that we will use to convert
+                                ECMAScript into a backwards compatible version
+                                of JavaScript for use in current and older
+                                browsers or environments.
+                              </p>
+                            </md-card-content>
+                          </md-card>
+                        </div>
+                      </div>
+                      <div
+                        class="md-layout-item md-medium-size-33 md-small-size-100"
+                      >
+                        <div class="team-player">
+                          <md-card class="md-card-plain">
+                            <div class="md-layout-item md-size-100 mx-auto">
+                              <img
+                                :src="jupyterLogo"
+                                alt="Thumbnail Image"
+                                class="rounded img-fluid jupyter-pic"
+                              />
+                            </div>
+                            <h4 class="card-title">Jupyter Notebook</h4>
+                            <md-card-content>
+                              <p class="card-description">
+                                We intend to make our project compatible with
+                                Jupyter Notebooks for ease of future development
+                                and use by the USGS community of researchers and
+                                scientists.
+                              </p>
+                            </md-card-content>
+                          </md-card>
+                        </div>
+                      </div>
+                      <div
+                        class="md-layout-item md-medium-size-33 md-small-size-100"
+                      >
+                        <div class="team-player">
+                          <md-card class="md-card-plain">
+                            <div class="md-layout-item md-size-100 mx-auto">
+                              <img
+                                :src="leafletLogo"
+                                alt="Thumbnail Image"
+                                class="rounded img-fluid leaflet-pic"
+                              />
+                            </div>
+                            <h4 class="card-title">Leaflet</h4>
+                            <md-card-content>
+                              <p class="card-description">
+                                Leaflet is the core JavaScript library we are
+                                building off of. It is just 38 KB, is
+                                mobile-friendly, interactive, and has all the
+                                mapping features most developers ever need.
+                              </p>
+                            </md-card-content>
+                          </md-card>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </template>
               </tabs>
             </div>
           </div>
@@ -173,7 +294,7 @@ export default {
     Tabs
   },
   name: "detailspage",
-  bodyClass: "details-page",
+  //bodyClass: "details-page",
   props: {
     header: {
       type: String,
@@ -182,6 +303,26 @@ export default {
     moonMap: {
       type: String,
       default: require("@/assets/img/usgs-moon-map.jpg")
+    },
+    marsMap: {
+      type: String,
+      default: require("@/assets/img/leaflet-mars-map.png")
+    },
+    solutionPic: {
+      type: String,
+      default: require("@/assets/img/solution.png")
+    },
+    leafletLogo: {
+      type: String,
+      default: require("@/assets/img/leaflet-logo.png")
+    },
+    jupyterLogo: {
+      type: String,
+      default: require("@/assets/img/jupyter-logo.png")
+    },
+    babelLogo: {
+      type: String,
+      default: require("@/assets/img/babel-logo.svg")
     }
   },
   computed: {
@@ -204,13 +345,24 @@ ol.text-left {
   display: table-cell;
   height: 450px;
   vertical-align: middle;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.7em;
   text-align: center;
+  padding: 10px;
 }
 
-.section {
-  padding: 70px 0;
+.babel-pic {
+  //height: 60%;
+  width: 75%;
+}
+.jupyter-pic {
+  //height: 100%;
+  width: 35%;
+}
+.leaflet-pic {
+  padding-top: 25px;
+  height: 100%;
+  //width: 100%;
 }
 
 .lg-text {
@@ -227,5 +379,12 @@ ol.text-left {
   &::before {
     background: rgba(0, 0, 0, 0.2);
   }
+}
+
+.separator-line {
+  background-color: #eee;
+  height: 1px;
+  width: 66%;
+  display: block;
 }
 </style>

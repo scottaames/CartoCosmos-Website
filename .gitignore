@@ -1,5 +1,6 @@
 # Ignore Mac system files
 .DS_Store
+.dist
 
 # Ignore SASS config files
 .sass-cache

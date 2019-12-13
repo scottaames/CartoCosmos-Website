@@ -9,10 +9,23 @@
               <md-tabs md-sync-route class="md-primary" md-alignment="left">
                 <md-tab
                   id="tab-home"
-                  md-label="Issues"
-                  md-icon="report_problem"
+                  md-label="Team Standards"
+                  md-icon="people_alt"
                 >
-                  <template slot="content"> </template>
+                  <template slot="content">
+                    <!-- <div class="text-center lg-text"> -->
+                    Th Team Standards lays down the roles of each of our team
+                    members in detail and the guidelines and rules we have
+                    established with the intention of holding ourselves and each
+                    other accountable over the course of this project.
+                    <!-- <br />
+                      <br />
+                    </div>
+                    <object
+                      data="./TeamStandards.pdf"
+                      type="application/pdf"
+                    ></object> -->
+                  </template>
                 </md-tab>
 
                 <md-tab
@@ -45,7 +58,7 @@
 import { NavTabsCard } from "@/components";
 
 export default {
-  name: "tabs",
+  name: "nav-tabs",
   components: {
     NavTabsCard
   }
