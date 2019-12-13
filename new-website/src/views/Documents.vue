@@ -35,7 +35,8 @@
                       'Mini Intro.',
                       'Tech Feasibility',
                       'Design Review 1',
-                      'Requirements'
+                      'Requirements',
+                      'Tech Demo Memo'
                     ]"
                     :tab-icon="[
                       'people_alt',
@@ -43,7 +44,8 @@
                       'present_to_all',
                       'poll',
                       'build',
-                      'work'
+                      'work',
+                      'build'
                     ]"
                     plain
                     flex-column
@@ -52,7 +54,7 @@
                   >
                     <template slot="tab-pane-1" class="pdf-container">
                       <div class="text-center lg-text">
-                        Th Team Standards lays down the roles of each of our
+                        The Team Standards lays down the roles of each of our
                         team members in detail and the guidelines and rules we
                         have established with the intention of holding ourselves
                         and each other accountable over the course of this
@@ -128,11 +130,24 @@
                         contains top-level functionality which is broken down
                         into the functional, non-functional (performance), and
                         environmental requirements and their specifics.
-                        <br />
-                        <br />
+                        <br/>
+                        <br/>
                       </div>
                       <object
                         data="./Requirements.pdf"
+                        type="application/pdf"
+                      ></object>
+                    </template>
+                    <template slot="tab-pane-7" class="pdf-container">
+                      <div class="text-center lg-text">
+                        The Technogical Demo Memo describes the challenges
+                        we aimed to solve in our demo and how we plan on
+                        solving them.
+                        <br/>
+                        <br/>
+                      </div>
+                      <object
+                        data="./Demo1.pdf"
                         type="application/pdf"
                       ></object>
                     </template>

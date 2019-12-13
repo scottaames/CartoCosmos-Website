@@ -35,11 +35,11 @@
 
                     <md-card-content>
                       <p class="card-description">
-                        Kaitlyn is originally from Lake havasu, Arizona and is
-                        graduating with a bachelor's degree in math and computer
+                        Kaitlyn is originally from Lake Havasu, Arizona, and is
+                        graduating with two bachelors' degrees in math and computer
                         science in May of 2020. Kaitlyn currently works at the
                         United States Geological Survey as a Software
-                        Development Intern. She enjoys programming, playing
+                        Developer. She enjoys programming, playing
                         games with friends and family, watching soccer, playing
                         basketball, and learning about our solar system.
                       </p>
@@ -84,11 +84,11 @@
 
                     <md-card-content>
                       <p class="card-description">
-                        Scott was born and raised in Temecula, CA and is a
+                        Scott was born and raised in Temecula, CA, and is a
                         computer science major set to graduate in May of 2020.
                         He currently works at Northern Arizona University as a
                         Teacher's Assistant for the School of Infomatics,
-                        Comuting, and Cyber Systems. His professional experience
+                        Computing, and Cyber Systems. His professional experience
                         includes full stack web development and backend
                         services. In his free time, he enjoys planetary and deep
                         sky viewing with his telescope, camping, hiking,
@@ -137,7 +137,7 @@
 
                     <md-card-content>
                       <p class="card-description">
-                        Jacob is from Sammamish, WA and is graduating with a
+                        Jacob is from Sammamish, WA, and is graduating with a
                         bachelor's degree in computer science in May of 2020. He
                         currently works at Schreiner Group as a Software
                         Development Intern. Jacob also throws the hammer on the
@@ -178,9 +178,9 @@
 
                     <md-card-content>
                       <p class="card-description">
-                        Chris is originally from Chandler, AZ and is graduating
-                        with a bachelor's degree in applied computer science,
-                        with a minor in electrical engineering, in May of 2020.
+                        Chris is originally from Chandler, AZ, and is graduating
+                        with a bachelor's degree in applied computer science
+                        with a minor in electrical engineering in May of 2020.
                         He currently works at Northern Arizona University
                         Information Technology as an Enterprise Student Worker.
                         He hopes to have a career in robotics in the future.
@@ -317,6 +317,7 @@
                       >
                         <i class="fas fa-globe"></i>
                       </md-button>
+
                       <md-button
                         href="https://github.com/USGSsakins"
                         class="md-just-icon md-simple"
