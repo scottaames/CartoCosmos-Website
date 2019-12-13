@@ -29,6 +29,24 @@
                 class="img-raised rounded img-fluid"
               />
             </div>
+            <div class="text-center lg-text">
+              <br />
+              <br />
+              Our tentative schedule for this capstone project is split up into
+              two different semesters. The first semester is the planning phase
+              of our project and the second semester is the implementation
+              phase. We have just finished the planning phase by completing our
+              technical feasibility document, requirements acquisition, and our
+              technical demo. Visit our
+              <a href="#/documents">documents page</a> to learn more. We will
+              begin the implementation phase of our project by implementing our
+              virtual planetary mapping application using Leaflet. We will then
+              connect our mapping application with Jupyter Notebooks. After
+              these steps are completed, we can begin implementing stretch goal
+              features and testing our Leaflet application. We will fix bugs
+              along the way and deliver our final project to USGS in the
+              beginning of May.
+            </div>
           </div>
         </div>
       </div>

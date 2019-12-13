@@ -21,7 +21,7 @@
             <div
               class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
             >
-              <h2 class="title text-center">Let's talk product</h2>
+              <h2 class="title text-center">About Our Project</h2>
               <h5 class="description">
                 Leaflet for planetary mapping (Leaflet-planetary for short) is a
                 plugin extension for
@@ -33,14 +33,14 @@
                 Christopher Moore, with mentoring from Isaac Shaffer, at
                 Northern Arizona University in Flagstaff, AZ. We are proudly
                 sponsored by the United States Geological Survey (USGS)
-                Astrogeology Center, a NASA subsidiary.
+                Astrogeology Science Center, a NASA subsidiary.
               </h5>
             </div>
           </div>
           <div class="md-layout">
             <div class="md-layout-item md-size-100 mx-auto text-center">
               <md-button
-                href="/team"
+                to="team"
                 class="md-button md-success md-lg md-upgrade"
               >
                 <md-icon>people_alt</md-icon>Meet the Team
@@ -78,12 +78,11 @@
 
                   <ul class="text-left">
                     <li>Latitude and longitude switcher</li>
-                    <li>Scale bar and Zoom</li>
+                    <li>Scale bar and zoom</li>
                     <li>Projection switcher</li>
                     <li>Layer switcher</li>
-                    <li>Surface Feature Overlay</li>
+                    <li>Surface feature overlay</li>
                   </ul>
-                  ...and <a href="/detailspage">more.</a>
                 </div>
               </div>
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
@@ -93,10 +92,10 @@
                   </div>
                   <h4 class="info-title">Compatability</h4>
                   <p>
-                    Built with portability, compatibility, and extendability in
-                    mind. Support for all modern web browsers and compatibile
-                    with The Jupyter Notebook to facilitate data sharing between
-                    users.
+                    Built with portability, compatibility, and extensibility in
+                    mind. We will support for all modern web browsers and be
+                    compatible with The Jupyter Notebook to facilitate data
+                    sharing between users.
                   </p>
                 </div>
               </div>
@@ -106,7 +105,7 @@
             <div class="md-layout-item md-size-50 md-small-size-100 mx-auto">
               <div class="btn-container">
                 <md-button
-                  href="/detailspage"
+                  to="detailspage"
                   class="md-button md-success md-lg md-upgrade"
                 >
                   <md-icon>info</md-icon>Learn More
@@ -131,8 +130,9 @@
                 Leaflet-planetary Demo
               </h2>
               <h4 class="text-center">
-                This is a glimpse at what our project will look like and how it
-                will function, but it is far from our final product.
+                This is a glimpse of what our project will look like and how it
+                will function, but it is far from our final product. The map
+                below is of Mars.
               </h4>
               <div class="md-layout">
                 <div class="md-layout-item md-size-100">

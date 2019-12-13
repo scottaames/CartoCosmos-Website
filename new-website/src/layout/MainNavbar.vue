@@ -9,7 +9,7 @@
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
         <img class="logo" :src="logo" alt="Logo" />
-        <h1 class="md-title">CartoCosmos</h1>
+        <h1 class="md-title">&ensp;CartoCosmos</h1>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
